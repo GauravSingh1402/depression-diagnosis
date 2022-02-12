@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter as Router ,Routes, Route} from "react-router-dom";
+import Home from './components/home';
+import Survey from './components/survey';
 function App() {
   return (
     <div className="App">
-
-      <h1>ZA WARUDO OVER HEAVEN</h1>
+       <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/survey" element={<Survey/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
