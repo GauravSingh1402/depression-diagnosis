@@ -26,7 +26,6 @@ export class Confirm extends Component {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            givenName: givenName,
             age: parseInt(age),
             gender:parseInt(gender),
             self_employed:parseInt(self_employed),
@@ -48,7 +47,6 @@ export class Confirm extends Component {
             phys_health_interview:parseInt(phys_health_interview),
             mental_vs_physical:parseInt(mental_vs_physical),
             obs_consequence:parseInt(obs_consequence),
-            treatment:parseInt(treatment)
           })
         }).then(response => response.json())
         .then(json => {
@@ -127,9 +125,6 @@ export class Confirm extends Component {
               </ListItem>
               <ListItem>
                 <ListItemText primary="Have you heard of or observed negative consequences for coworkers with mental health conditions in your" secondary={obs_consequence === '0' ? ("No"): obs_consequence === '1' ?("Yes"):("")} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Have you sought treatment for a mental health condition?" secondary={treatment === '0' ? ("No"): treatment === '1' ? ("Yes"):("")} />
               </ListItem>
             </List>
             <div style={{width:'100%'}}>
