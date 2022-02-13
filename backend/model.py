@@ -7,23 +7,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 men=pd.read_csv('./dataset/survey.csv')
-men
+# men
 
 men['self_employed']=men.self_employed.fillna('No')
-men
+# men
 
 men=men.drop(["Timestamp","Country","state","no_employees","comments"],axis=1)
 
 treat=men.pop('treatment')
 men['treatment']=treat
-men
+# men
 
 men['work_interfere'].unique()
 
 men['work_interfere'].mode()
 
 men['work_interfere'] = men['work_interfere'].fillna('Sometimes')
-men
+# men
 
 for col in men:
     print(men[col].unique())
@@ -40,7 +40,7 @@ def encode_gender(x):
 
 men['Gender'] = men['Gender'].apply(encode_gender)
 
-men.head(10)
+# men.head(10)
 
 def encode_binary(x):
     if x.lower() == 'yes':
@@ -55,7 +55,7 @@ men['tech_company'] = men['tech_company'].apply(encode_binary)
 men['obs_consequence'] = men['obs_consequence'].apply(encode_binary)
 men['treatment'] = men['treatment'].apply(encode_binary)
 
-men.head(15)
+# men.head(15)
 
 
 
@@ -111,7 +111,7 @@ men['work_interfere'] = men['work_interfere'].apply(encode_quad)
 
 men['leave'] = men['leave'].apply(encode_pent)
 
-men
+# men
 
 
 men.to_csv('output.csv', encoding = 'utf-8-sig')
@@ -136,7 +136,7 @@ classifier = LogisticRegression()
 classifier.fit(x_train, y_train)
 
 y_pred= classifier.predict(x_test) 
-y_pred
+# y_pred
 
 classifier.predict([[37,0,0,0,3,0,1,1,2,0,1,1,1,0,0,2,1,0,2,1,0]])
 
@@ -147,4 +147,4 @@ classifier.predict([[44,1,0,0,1,0,0,2,0,2,2,2,2,2,0,0,0,0,0,2,0]])
 classifier.predict([[26,1,0,0,2,0,1,0,0,0,0,2,1,0,0,2,2,0,0,2,0]])
 
 score = classifier.score(x_test, y_test)
-print(score)
+# print(score)

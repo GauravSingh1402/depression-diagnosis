@@ -7,7 +7,7 @@ import "./Quotes.css";
 function Quotes() {
 	const quotes = [
 		"Nothing is impossible. The word itself says 'I'm possible!",
-		"The bad news is time flies. The good news is you\re the pilot.",
+		"The bad news is time flies. The good news is you're the pilot.",
 		"Spread love everywhere you go",
 		"It is during our darkest moments that we must focus to see the light",
 		"Try to be a rainbow in someone's cloud",
@@ -17,32 +17,6 @@ function Quotes() {
 		"Embrace the glorious mess that you are.",
 		"Never bend your head. Always hold it high. Look the world straight in the eye",
 	];
-	// const quotes = [
-	// 	{
-	// 		quote:
-	// 			"I love you the more in that I believe you had liked me for my own sake and for nothing else",
-	// 		author: "John Keats",
-	// 	},
-	// 	{
-	// 		quote: "I have not failed. I've just found 10,000 ways that won't work.",
-	// 		author: "Thomas A. Edison",
-	// 	},
-	// 	{
-	// 		quote:
-	// 			"But man is not made for defeat. A man can be destroyed but not defeated.",
-	// 		author: "Ernest Hemingway",
-	// 	},
-	// 	{
-	// 		quote:
-	// 			"The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
-	// 		author: "Albert Einstein",
-	// 	},
-	// 	{
-	// 		quote:
-	// 			"The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
-	// 		author: "Jane Austen",
-	// 	},
-	// ];
 	const [quoteData, getQuoteData] = React.useState(quotes);
 	const [current, setCurrent] = React.useState(0);
 	const [quote, getQuote] = React.useState(quoteData[current]);
@@ -61,7 +35,7 @@ function Quotes() {
 
 	console.log(current);
 	return (
-		<section>
+		<div className="Quotes-container">
 			<div className="slideshow-container">
 				<Slide quote={quote} />
 				<Arrows nextQuote={nextQuote} prevQuote={prevQuote} />
@@ -71,7 +45,7 @@ function Quotes() {
 				current={current}
 				dotPicksQuote={dotPicksQuote}
 			/>
-		</section>
+		</div>
 	);
 }
 

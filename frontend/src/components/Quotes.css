@@ -1,6 +1,10 @@
 /* Slideshow container */
 * {
-	font-family: 'Sora', sans-serif;
+	font-family: "Sora", sans-serif;
+}
+
+.Quotes-container {
+	height: 50%;
 }
 
 .slideshow-container {
@@ -16,8 +20,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0 6rem;
-	height: 93vh;
+	padding: 2rem;
+	height: 50vh;
 }
 
 .arrows-container {
@@ -86,9 +90,9 @@
 
 /* Add an italic font style to all quotes */
 q {
-	font-size: 5.3vw;
+	font-size: 3rem;
 	font-style: italic;
-	text-align: left;
+	text-align: center;
 }
 
 /* Add a blue color to the author */
