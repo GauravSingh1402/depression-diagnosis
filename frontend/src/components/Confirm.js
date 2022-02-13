@@ -125,7 +125,7 @@ export class Confirm extends Component {
                 <ListItemText primary="Do you feel that your employer takes mental health as seriously as physical health?" secondary={mental_vs_physical === '0' ? ("No") : mental_vs_physical === '1'? ("Yes"): mental_vs_physical==='2'?("Don't Know"):("")} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Have you heard of or observed negative consequences for coworkers with mental health conditions in your" secondary={obs_consequence === '0' ? ("No"): obs_consequence === '1' ?("Yes"):("")} />
+                <ListItemText primary="Have you heard of or observed negative consequences for coworkers with mental health conditions in your organization" secondary={obs_consequence === '0' ? ("No"): obs_consequence === '1' ?("Yes"):("")} />
               </ListItem>
             </List>
             <div style={{width:'100%'}}>

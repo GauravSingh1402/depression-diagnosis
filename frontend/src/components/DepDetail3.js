@@ -109,7 +109,7 @@ export class DepDetail3 extends Component {
 						<FormControl>
 							<FormLabel align="left" id="demo-row-radio-buttons-group-label">
 								Have you heard of or observed negative consequences for
-								coworkers with mental health conditions in your
+								coworkers with mental health conditions in your organization
 							</FormLabel>
 							<RadioGroup
 								row
