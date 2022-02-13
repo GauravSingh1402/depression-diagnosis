@@ -72,7 +72,7 @@ export class Confirm extends Component {
           const sd = json.msg;
           treat = json.msg.toString();
           console.log(treat);
-          values.treatment = '1';
+          values.treatment = treat;
           this.setState({
             result:true
         }); 
