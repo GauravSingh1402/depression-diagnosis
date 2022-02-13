@@ -16,12 +16,12 @@ export class UserDetail extends Component {
     return (
       <div className='userdetail'>
           <React.Fragment>
+          <div style={{width:'100%',color:'#054f99',padding:"1%",fontWeight:"bold"}}>1/5</div>
           <TextField
           required
           id="outlined-required"
           label="Given Name"
-          variant="filled" 
-          defaultValue="Hello World"
+          variant="filled"
           onChange={handleChange('givenName')}
           defaultValue={values.givenName}
           fullWidth
@@ -34,7 +34,7 @@ export class UserDetail extends Component {
           onChange={handleChange('age')}
           defaultValue={values.age}
         /><br/>
-        <FormControl>
+          <FormControl>
       <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
       <RadioGroup
         row
@@ -43,20 +43,29 @@ export class UserDetail extends Component {
         value={values.gender}
         onChange={handleChange('gender')}
       >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
+        <FormControlLabel value={0} control={<Radio />} label="Female" />
+        <FormControlLabel value={1} control={<Radio />} label="Male" />
+        <FormControlLabel value={2} control={<Radio />} label="Other" />
       </RadioGroup>
-    </FormControl><br/>
-    <TextField
-          required
-          id="outlined-required"
-          label="Country"
-          variant="filled"
-          onChange={handleChange('country')}
-          defaultValue={values.country}
-        /><br/>
+    </FormControl>
+    <br/>
+    <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Are you self-employed ?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        value={values.self_employed}
+        onChange={handleChange('self_employed')}
+      >
+        <FormControlLabel value={1} control={<Radio />} label="Yes" />
+        <FormControlLabel value={0} control={<Radio />} label="No" />
+      </RadioGroup>
+    </FormControl>
+    <br/>
+    <div style={{width:'100%'}}>
         <Button onClick={this.continue}>Continue</Button>
+      </div>
           </React.Fragment>
       </div>
     )

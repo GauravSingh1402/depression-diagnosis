@@ -26,8 +26,9 @@
 }
 .userdetail{
     position:absolute;
-    top:20%;
+    top:15%;
     width:50%;
+    border-radius:15px;
     background-color:#edf5e1;
     left:24%;
     padding:1%;

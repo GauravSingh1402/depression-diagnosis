@@ -2,18 +2,35 @@ import React, { Component } from 'react'
 import UserDetail from './UserDetail';
 import DepDetail from './DepDetail';
 import Confirm from './Confirm';
+import DepDetail1 from './DepDetail1';
+import DepDetail2 from './DepDetail2';
+import DepDetail3 from './DepDetail3';
 export class Survey extends Component {
   state={
       step: 1,
       givenName:'',
       age:'',
-      gender:'',
-      country:'',
-      selfEmployed:'',
-      noEmployees:'',
-      mentalIllnessHistory:'',
-      treatmentTaken:'',
-      mentalHealthInterefereWork:''
+      gender:null,
+      self_employed:null,
+      family_history:null,
+      work_interfere:null,
+      remote_work:null,
+      tech_company:null,
+      benefits:null,
+      care_options:null,
+      wellness_program:null,
+      seek_help:null,
+      anonymity:null,
+      leave:null,
+      mental_health_consequence:null,
+      phys_health_consequence:null,
+      coworkers:null,
+      supervisor:null,
+      mental_health_interview:null,
+      phys_health_interview:null,
+      mental_vs_physical:null,
+      obs_consequence:null,
+      treatment:null
   }
   nextSection=()=>{
       const{step}=this.state;
@@ -32,8 +49,12 @@ export class Survey extends Component {
   }
   render() {
       const{ step }=this.state;
-      const{ givenName,age,gender,country,selfEmployed,noEmployees,mentalIllnessHistory,treatmentTaken,mentalHealthInterefereWork } = this.state;
-      const values = { givenName,age,gender,country,selfEmployed,noEmployees,mentalIllnessHistory,treatmentTaken,mentalHealthInterefereWork }
+      const{  givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
+        phys_health_consequence,coworkers,supervisor,mental_health_interview,
+        phys_health_interview,mental_vs_physical,obs_consequence,treatment} = this.state;
+      const values = {  givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
+        phys_health_consequence,coworkers,supervisor,mental_health_interview,
+        phys_health_interview,mental_vs_physical,obs_consequence,treatment }
    switch(step){
        case 1:
            return(
@@ -46,12 +67,23 @@ export class Survey extends Component {
            )
         case 3:
             return(
-                <Confirm nextSection={this.nextSection} 
-                prevSection={this.prevSection} handleChange={this.handleChange} values={values}></Confirm>
+                <DepDetail1 nextSection={this.nextSection} 
+                prevSection={this.prevSection} handleChange={this.handleChange} values={values}></DepDetail1>
             )
        case 4:
            return(
-               <div>Success</div>
+            <DepDetail2 nextSection={this.nextSection} 
+            prevSection={this.prevSection} handleChange={this.handleChange} values={values}></DepDetail2>
+           )
+           case 5:
+           return(
+            <DepDetail3 nextSection={this.nextSection} 
+            prevSection={this.prevSection} handleChange={this.handleChange} values={values}></DepDetail3>
+           )
+           case 6:
+           return(
+            <Confirm nextSection={this.nextSection} 
+            prevSection={this.prevSection} handleChange={this.handleChange} values={values}></Confirm>
            )
            default:
             (console.log('This is a multi-step form built with React.'))
