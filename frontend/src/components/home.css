@@ -63,6 +63,22 @@
     align-items:start;
     justify-content:flex-start;
 }
+.resultdetail{
+    position:absolute;
+    z-index:2;
+    top:15%;
+    font-family: 'Poppins', sans-serif;
+    width:50%;
+    border-radius:15px;
+    background-color:#edf5e1;
+    left:24%;
+    padding:1%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:30%;
+    justify-content:space-evenly;
+}
 .userdetails{
     position:absolute;
     top:0;
@@ -82,6 +98,14 @@
 }
 .userdetail FormLabel{
     float:left;
+}
+.resultdetail Button{
+    background-color:#054f99;
+    color:#edf5e1;
+    float:right;
+}
+.resultdetail Button:hover{
+    background-color:#05386b;
 }
 .userdetail Button{
     background-color:#054f99;

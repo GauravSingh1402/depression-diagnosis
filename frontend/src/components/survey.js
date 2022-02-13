@@ -44,15 +44,24 @@ export class Survey extends Component {
         step:step-1
     }); 
   }
+  revert=()=>{
+    const{step}=this.state;
+    this.setState({
+        step:1
+    }); 
+  }
   handleChange=input=>e=>{
       this.setState({[input]:e.target.value});
   }
+  handleTreat=vals=>{
+      this.setState({['treatment']:vals});
+  }
   render() {
       const{ step }=this.state;
-      const{  givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
+      const{ givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
         phys_health_consequence,coworkers,supervisor,mental_health_interview,
         phys_health_interview,mental_vs_physical,obs_consequence,treatment} = this.state;
-      const values = {  givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
+      const values = {step,givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
         phys_health_consequence,coworkers,supervisor,mental_health_interview,
         phys_health_interview,mental_vs_physical,obs_consequence,treatment }
    switch(step){
@@ -82,7 +91,7 @@ export class Survey extends Component {
            )
            case 6:
            return(
-            <Confirm nextSection={this.nextSection} 
+            <Confirm nextSection={this.nextSection} revert={this.revert}
             prevSection={this.prevSection} handleChange={this.handleChange} values={values}></Confirm>
            )
            default:
