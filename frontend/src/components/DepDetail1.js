@@ -17,6 +17,14 @@ export class DepDetail1 extends Component {
     }
   render() {
     const {values,handleChange} = this.props;
+    const check=e=>{
+      if((values.care_options==null)||(values.anonymity===null)||(values.seek_help===null)||(values.wellness_program===null)){
+        alert("All The Field Are Mandatory")
+      }
+      else{
+        this.continue(e);
+      }
+    }
     return (
       <div className='stylings'>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -82,7 +90,7 @@ export class DepDetail1 extends Component {
       </RadioGroup>
     </FormControl>
      <div style={{width:'100%'}}>
-     <Button onClick={this.continue}>Continue</Button>
+     <Button onClick={check}>Continue</Button>
         <Button className='rightBtn' onClick={this.back}>Back</Button>
      </div>
           </React.Fragment>

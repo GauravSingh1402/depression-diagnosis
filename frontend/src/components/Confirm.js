@@ -19,13 +19,7 @@ export class Confirm extends Component {
     this.props;
     const submit=e=>{
       e.preventDefault();
-      console.log(this.props);
-      if([givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
-        phys_health_consequence,coworkers,supervisor,mental_health_interview,
-        phys_health_interview,mental_vs_physical,obs_consequence,treatment].some(el=>el=>null)){
-          alert("All The Field Are Mandatory")
-        }
-      else{
+      
         fetch('/postSurveyData', {
           method: 'POST',
           headers: {
@@ -33,28 +27,28 @@ export class Confirm extends Component {
           },
           body: JSON.stringify({
             givenName: givenName,
-            age: age,
-            gender:gender,
-            self_employed:self_employed,
-            family_history:family_history,
-            work_interfere: work_interfere,
-            remote_work:remote_work,
-            tech_company:tech_company,
-            benefits:benefits,
-            care_options:care_options,
-            wellness_program:wellness_program,
-            seek_help:seek_help,
-            anonymity:anonymity,
-            leave:leave,
-            mental_health_consequence:mental_health_consequence,
-            phys_health_consequence:phys_health_consequence,
-            coworkers:coworkers,
-            supervisor:supervisor,
-            mental_health_interview:mental_health_interview,
-            phys_health_interview:phys_health_interview,
-            mental_vs_physical:mental_vs_physical,
-            obs_consequence:obs_consequence,
-            treatment:treatment
+            age: parseInt(age),
+            gender:parseInt(gender),
+            self_employed:parseInt(self_employed),
+            family_history:parseInt(family_history),
+            work_interfere: parseInt(work_interfere),
+            remote_work:parseInt(remote_work),
+            tech_company:parseInt(tech_company),
+            benefits:parseInt(benefits),
+            care_options:parseInt(care_options),
+            wellness_program:parseInt(wellness_program),
+            seek_help:parseInt(seek_help),
+            anonymity:parseInt(anonymity),
+            leave:parseInt(leave),
+            mental_health_consequence:parseInt(mental_health_consequence),
+            phys_health_consequence:parseInt(phys_health_consequence),
+            coworkers:parseInt(coworkers),
+            supervisor:parseInt(supervisor),
+            mental_health_interview:parseInt(mental_health_interview),
+            phys_health_interview:parseInt(phys_health_interview),
+            mental_vs_physical:parseInt(mental_vs_physical),
+            obs_consequence:parseInt(obs_consequence),
+            treatment:parseInt(treatment)
           })
         }).then(response => response.json())
         .then(json => {
@@ -64,7 +58,6 @@ export class Confirm extends Component {
         .catch(error => {
           console.log(error)
         });
-      }
       }
     return (
       <div className='userdetails'>
