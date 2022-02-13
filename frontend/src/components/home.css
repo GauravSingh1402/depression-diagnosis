@@ -1,45 +1,13 @@
-.main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100vw;
-	/* height:100vh; */
-	background-color: #5cdb95;
-	font-family: "Poppins", sans-serif;
-}
-.main h1 {
-	color: #05386b;
-}
-.main h4 {
-	/* color:black; */
-	padding: 0 2.5rem;
-}
-
-.main button {
-	display: inline-block;
-	padding: 15px 25px;
-	font-size: 24px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #05386b;
-	border: none;
-	border-radius: 15px;
-}
-
-.main button:hover {
+.main button:active {
 	background-color: #08529c;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
-
-.main button{
-    display: inline-block;
+.buttons {
     padding: 15px 25px;
     font-size: 24px;
-    cursor: pointer;
     text-align: center;
-    text-decoration: none;
+    cursor: pointer;
     outline: none;
     color: #fff;
     background-color: #05386b;
@@ -48,40 +16,102 @@
     box-shadow: 0 9px #999;
   }
   
-  .main button:hover {background-color: #08529c}
+  .buttons:hover {background-color: #08529c}
   
-  .main button:active {
+  .buttons:active {
     background-color: #08529c;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-.footers{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    background-color:#05386b;
-    color:#fff;
+.footers {
+	position: relative;
+    margin-top:25px;
+	padding: 0.5rem;
+	bottom: 0;
+	width: 100%;
+	background-color: #05386b;
+	color: #fff;
 }
-.stylings{
-    width:100vw;
-    height:100vh;
-    background-color:#5cdb95; 
+.stylings {
+	width: 100vw;
+	/* height: 100vh; */
+	background-color: #5cdb95;
 }
-.userdetail{
-    position:absolute;
-    z-index:2;
-    top:15%;
-    font-family: 'Poppins', sans-serif;
-    width:50%;
-    border-radius:15px;
-    background-color:#edf5e1;
-    left:24%;
-    padding:1%;
-    display:flex;
-    flex-direction:column;
-    align-items:start;
-    justify-content:flex-start;
+/* .stylings .blob {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+} */
+.userdetail {
+	position: absolute;
+	z-index: 2;
+	top: 15%;
+	font-family: "Poppins", sans-serif;
+	width: 50%;
+	border-radius: 15px;
+	background-color: #edf5e1;
+	left: 24%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
 }
+.userdetails {
+	position: absolute;
+	/* top: 0; */
+	z-index: 2;
+	width: 50%;
+	font-family: "Poppins", sans-serif;
+	background-color: #edf5e1;
+	left: 24%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
+	border-radius: 2rem;
+}
+.userdetail TextField {
+	float: left;
+}
+.userdetail FormLabel {
+	float: left;
+}
+.userdetail Button {
+	background-color: #054f99;
+	color: #edf5e1;
+	float: right;
+}
+.userdetail Button:hover {
+	background-color: #05386b;
+}
+.userdetail .rightBtn {
+	float: left;
+}
+.userdetails Button {
+	background-color: #054f99;
+	color: #edf5e1;
+	float: right;
+}
+.userdetails Button:hover {
+	background-color: #05386b;
+}
+.userdetails .rightBtn {
+	float: left;
+}
+.userdetails .submitBtn {
+	background-color: red;
+	transition: 1s;
+}
+.userdetails .submitBtn:hover {
+	background-color: green;
+}
+.credit-link {
+	float: right;
+	color: #666;
+}
+
 .resultdetail{
     position:absolute;
     z-index:2;
@@ -98,26 +128,6 @@
     height:30%;
     justify-content:space-evenly;
 }
-.userdetails{
-    position:absolute;
-    top:0;
-    z-index:2;
-    width:50%;
-    font-family: 'Poppins', sans-serif;
-    background-color:#edf5e1;
-    left:24%;
-    padding:1%;
-    display:flex;
-    flex-direction:column;
-    align-items:start;
-    justify-content:flex-start;
-}
-.userdetail TextField{
-    float:left;
-}
-.userdetail FormLabel{
-    float:left;
-}
 .resultdetail Button{
     background-color:#054f99;
     color:#edf5e1;
@@ -125,33 +135,4 @@
 }
 .resultdetail Button:hover{
     background-color:#05386b;
-}
-.userdetail Button{
-    background-color:#054f99;
-    color:#edf5e1;
-    float:right;
-}
-.userdetail Button:hover{
-    background-color:#05386b;
-}
-.userdetail .rightBtn{
-    float:left;
-}
-.userdetails Button{
-    background-color:#054f99;
-    color:#edf5e1;
-    float:right;
-}
-.userdetails Button:hover{
-    background-color:#05386b;
-}
-.userdetails .rightBtn{
-    float:left;
-}
-.userdetails .submitBtn{
-    background-color:red;
-    transition:1s;
-}
-.userdetails .submitBtn:hover{
-    background-color:green;
 }

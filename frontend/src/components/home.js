@@ -23,7 +23,7 @@ function Home() {
 				</h4>
 				<br />
 				<br />
-				<button onClick={surveypage}>Take Quick Survey</button>
+				<button className="buttons" onClick={surveypage}>Take Quick Survey</button>
 				<footer className="footers">
 					<p>Made By Gaurav, Advait and Hridayesh <a class="credit-link" href="/credits">
 						Credits
