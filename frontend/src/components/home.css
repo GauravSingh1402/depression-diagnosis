@@ -1,0 +1,84 @@
+.main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100vw;
+    height:100vh;
+    background-color:#5cdb95;
+    font-family: 'Poppins', sans-serif;
+}
+.main h1{
+    color:#05386b;
+}
+.main button{
+    padding:1%;
+    background-color:#05386b;
+    font-size:20px;
+    color:#edf5e1;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    transition:1s;
+}
+.main  button:hover{
+    background-color:#054f99;
+}
+.userdetail{
+    position:absolute;
+    top:20%;
+    width:50%;
+    background-color:#edf5e1;
+    left:24%;
+    padding:1%;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content:flex-start;
+}
+.userdetails{
+    position:absolute;
+    width:50%;
+    background-color:#edf5e1;
+    left:24%;
+    padding:1%;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content:flex-start;
+}
+.userdetail TextField{
+    float:left;
+}
+.userdetail FormLabel{
+    float:left;
+}
+.userdetail Button{
+    background-color:#054f99;
+    color:#edf5e1;
+    float:right;
+}
+.userdetail Button:hover{
+    background-color:#05386b;
+}
+.userdetail .rightBtn{
+    float:left;
+}
+.userdetails Button{
+    background-color:#054f99;
+    color:#edf5e1;
+    float:right;
+}
+.userdetails Button:hover{
+    background-color:#05386b;
+}
+.userdetails .rightBtn{
+    float:left;
+}
+.userdetails .submitBtn{
+    background-color:red;
+    transition:1s;
+}
+.userdetails .submitBtn:hover{
+    background-color:green;
+}
