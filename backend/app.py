@@ -4,8 +4,18 @@ app=Flask(__name__)
 def hello():
     return "Hello"
  
+@app.route('/survey')
+def survey():
+    return "survey"
+
+@app.route('/result')
+def result():
+    return "result"
 
 
+@app.route('/selfhelp')
+def selfhelp():
+    return "selfhelp"
 
 
 
