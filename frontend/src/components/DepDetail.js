@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TextField,Button } from '@mui/material';
+import { Button } from '@mui/material';
 import './home.css';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -19,70 +19,76 @@ export class DepDetail extends Component {
     const {values,handleChange} = this.props;
     return (
       <div className='userdetail'>
-          <React.Fragment>
-          <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Are you self-employed ?</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        value={values.selfEmployed}
-        onChange={handleChange('selfEmployed')}
-      >
-        <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-        <FormControlLabel value="No" control={<Radio />} label="No" />
-      </RadioGroup>
-    </FormControl>
-          <TextField
-          required
-          id="outlined-required"
-          label="No.Of Employees in Your Organization"
-          variant="filled"
-          onChange={handleChange('noEmployees')}
-          defaultValue={values.noEmployees}
-          fullWidth
-        /><br/>
-            <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Do you have a family history of mental illness ?</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        value={values.mentalIllnessHistory}
-        onChange={handleChange('mentalIllnessHistory')}
-      >
-        <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-        <FormControlLabel value="No" control={<Radio />} label="No" />
-      </RadioGroup>
-    </FormControl><br/>
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Have you sought treatment for a mental health condition?</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        value={values.treatmentTaken}
-        onChange={handleChange('treatmentTaken')}
-      >
-        <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-        <FormControlLabel value="No" control={<Radio />} label="No" />
-      </RadioGroup>
-    </FormControl><br/>
+          <React.Fragment> 
+          <div style={{width:'100%',color:'#054f99',padding:"1%",fontWeight:"bold"}}>2/5</div>
     <FormControl>
       <FormLabel id="demo-row-radio-buttons-group-label">If you have a mental health condition, do you feel that it interferes with your work ?</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        value={values.mentalHealthInterefereWork}
-        onChange={handleChange('mentalHealthInterefereWork')}
+        value={values.work_interfere}
+        onChange={handleChange('work_interfere')}
       >
-        <FormControlLabel value="Often" control={<Radio />} label="Often" />
-        <FormControlLabel value="Sometimes" control={<Radio />} label="Sometimes" />
-        <FormControlLabel value="Rarely" control={<Radio />} label="Rarely" />
-        <FormControlLabel value="Never" control={<Radio />} label="Never" />
+       <FormControlLabel value={3} control={<Radio />} label="Often" />
+        <FormControlLabel value={2} control={<Radio />} label="Sometimes" />
+        <FormControlLabel value={1} control={<Radio />} label="Rarely" />
+        <FormControlLabel value={0} control={<Radio />} label="Never" />
       </RadioGroup>
     </FormControl>
+     <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Do you have a family history of mental illness ?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        value={values.family_history}
+        onChange={handleChange('family_history')}
+      >
+        <FormControlLabel value={1} control={<Radio />} label="Yes" />
+        <FormControlLabel value={0} control={<Radio />} label="No" />
+      </RadioGroup>
+    </FormControl>
+    <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Do you work remotely (outside of an office) at least 50% of the time?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        value={values.remote_work}
+        onChange={handleChange('remote_work')}
+      >
+        <FormControlLabel value={1} control={<Radio />} label="Yes" />
+        <FormControlLabel value={0} control={<Radio />} label="No" />
+      </RadioGroup>
+    </FormControl>
+    <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Is your employer primarily a tech company/organization ?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        value={values.tech_company}
+        onChange={handleChange('tech_company')}
+      >
+       <FormControlLabel value={1} control={<Radio />} label="Yes" />
+        <FormControlLabel value={0} control={<Radio />} label="No" />
+      </RadioGroup>
+    </FormControl>
+    <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Does your employer provide mental health benefits?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        value={values.benefits}
+        onChange={handleChange('benefits')}
+      >
+          <FormControlLabel value={1} control={<Radio />} label="Yes" />
+        <FormControlLabel value={0} control={<Radio />} label="No" />
+        <FormControlLabel value={2} control={<Radio />} label="Don't Know" />
+      </RadioGroup>
+    </FormControl>     
      <div style={{width:'100%'}}>
      <Button onClick={this.continue}>Continue</Button>
         <Button className='rightBtn' onClick={this.back}>Back</Button>
