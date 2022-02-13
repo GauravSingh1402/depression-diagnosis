@@ -9,7 +9,9 @@ export class Confirm extends Component {
         e.preventDefault();
         this.props.prevSection();
     }
-    
+    state={
+      error:false,
+    }
   render() {
     const {values:{ givenName,age,gender,self_employed,family_history, work_interfere,remote_work,tech_company,benefits,care_options, wellness_program,seek_help,anonymity,leave,mental_health_consequence,
     phys_health_consequence,coworkers,supervisor,mental_health_interview,
