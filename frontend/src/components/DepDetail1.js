@@ -107,7 +107,7 @@ export class DepDetail1 extends Component {
 							</RadioGroup>
 						</FormControl>
 						<FormControl>
-							<FormLabel id="demo-row-radio-buttons-group-label">
+							<FormLabel align="left" id="demo-row-radio-buttons-group-label">
 								Is your anonymity protected if you choose to take advantage of
 								mental health or substance abuse treatment
 							</FormLabel>
