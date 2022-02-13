@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import Survey from "./components/survey";
-import Quotes from "./components/Quotes";
+
 import Help from "./components/Selfhelp";
 import Navbar from "./components/Navbar";
 import Credits from "./components/Credits";
@@ -14,7 +14,6 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/survey" element={<Survey />} />
-					<Route path="/quotes" element={<Quotes />} />
 					<Route path="/help" element={<Help />} />
 					<Route path="/credits" element={<Credits />} />
 				</Routes>

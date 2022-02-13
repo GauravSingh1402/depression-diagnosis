@@ -114,7 +114,7 @@ men['leave'] = men['leave'].apply(encode_pent)
 # men
 
 
-men.to_csv('output.csv', encoding = 'utf-8-sig')
+# men.to_csv('output.csv', encoding = 'utf-8-sig')
 
 list(men.columns)
 
