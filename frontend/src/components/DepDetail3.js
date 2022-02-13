@@ -18,7 +18,7 @@ export class DepDetail3 extends Component {
   render() {
     const {values,handleChange} = this.props;
     const check=e=>{
-      if((values.treatment==null)||(values.mental_health_interview===null)||(values.phys_health_interview===null)||(values.obs_consequence===null)||(values.mental_vs_physical===null)){
+      if((values.mental_health_interview===null)||(values.phys_health_interview===null)||(values.obs_consequence===null)||(values.mental_vs_physical===null)){
         alert("All The Field Are Mandatory")
       }
       else{
@@ -88,19 +88,7 @@ export class DepDetail3 extends Component {
         <FormControlLabel value={0} control={<Radio />} label="No" />
       </RadioGroup>
     </FormControl>
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Have you sought treatment for a mental health condition?</FormLabel>
-    <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        value={values.treatment}
-        onChange={handleChange('treatment')}
-      >
-          <FormControlLabel value={1} control={<Radio />} label="Yes" />
-        <FormControlLabel value={0} control={<Radio />} label="No" />
-      </RadioGroup>
-    </FormControl>
+    
      <div style={{width:'100%'}}>
      <Button onClick={check}>Continue</Button>
         <Button className='rightBtn' onClick={this.back}>Back</Button>

@@ -43,8 +43,10 @@ export class DepDetail2 extends Component {
         onChange={handleChange('leave')}
       >
           <FormControlLabel value={1} control={<Radio />} label="SomeWhat Easy" />
-        <FormControlLabel value={0} control={<Radio />} label="SomeWhat Difficult" />
+        <FormControlLabel value={3} control={<Radio />} label="SomeWhat Difficult" />
         <FormControlLabel value={2} control={<Radio />} label="Don't Know" />
+        <FormControlLabel value={0} control={<Radio />} label="Very easy" />
+        <FormControlLabel value={4} control={<Radio />} label="Very Difficult" />
       </RadioGroup>
     </FormControl>
     <FormControl>
