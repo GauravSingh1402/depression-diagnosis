@@ -6,7 +6,7 @@ from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
-men=pd.read_csv('/dataset/survey.csv')
+men=pd.read_csv('./dataset/survey.csv')
 men
 
 men['self_employed']=men.self_employed.fillna('No')

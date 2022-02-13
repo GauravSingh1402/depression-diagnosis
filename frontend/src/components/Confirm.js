@@ -58,6 +58,7 @@ export class Confirm extends Component {
         .then(json => {
           const sd = json.msg;
           console.log(sd)
+          
         })
         .catch(error => {
           console.log(error)
