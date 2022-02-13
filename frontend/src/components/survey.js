@@ -8,8 +8,8 @@ import DepDetail3 from './DepDetail3';
 export class Survey extends Component {
   state={
       step: 1,
-      givenName:'',
-      age:'',
+      givenName:null,
+      age:null,
       gender:null,
       self_employed:null,
       family_history:null,

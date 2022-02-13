@@ -103,7 +103,7 @@ def encode_pent(x):
     elif x.lower() == 'don\'t know':
         return 2
     elif x.lower() == 'somewhat difficult':
-        return 2
+        return 3
     else:
         return 4
 

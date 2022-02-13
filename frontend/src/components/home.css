@@ -2,7 +2,6 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
     width:100vw;
     height:100vh;
     background-color:#5cdb95;
@@ -11,22 +10,49 @@
 .main h1{
     color:#05386b;
 }
-.main button{
-    padding:1%;
-    background-color:#05386b;
-    font-size:20px;
-    color:#edf5e1;
-    border:none;
-    outline:none;
-    border-radius:15px;
-    transition:1s;
+.main h4{
+    color:#666;
 }
-.main  button:hover{
-    background-color:#054f99;
+
+.main button{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #05386b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .main button:hover {background-color: #08529c}
+  
+  .main button:active {
+    background-color: #08529c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.footers{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color:#05386b;
+    color:#fff;
+}
+.stylings{
+    width:100vw;
+    height:100vh;
+    background-color:#5cdb95; 
 }
 .userdetail{
     position:absolute;
+    z-index:2;
     top:15%;
+    font-family: 'Poppins', sans-serif;
     width:50%;
     border-radius:15px;
     background-color:#edf5e1;
@@ -39,7 +65,10 @@
 }
 .userdetails{
     position:absolute;
+    top:0;
+    z-index:2;
     width:50%;
+    font-family: 'Poppins', sans-serif;
     background-color:#edf5e1;
     left:24%;
     padding:1%;
