@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import numpy as np
 from model import *
 app=Flask(__name__)
+CORS(app)
 @app.route('/')
 def hello():
     return "Hello"
@@ -11,10 +13,10 @@ def surveyDatas():
     list=[]
     for x in surveyDa:
         list.append(surveyDa[x])
-    print(list)
+    # print(list)
     predicted_value=classifier.predict([list])
     predicted_value=predicted_value.tolist()
-    print("Prediction value: ",predicted_value)
+    # print("Prediction value: ",predicted_value)
     if not surveyDa:
     #     return predicted_value, 400
     # return predicted_value, 200

@@ -25,8 +25,8 @@ men['work_interfere'].mode()
 men['work_interfere'] = men['work_interfere'].fillna('Sometimes')
 # men
 
-for col in men:
-    print(men[col].unique())
+# for col in men:
+#     print(men[col].unique())
 
 men.isna().sum()
 
@@ -119,10 +119,10 @@ men['leave'] = men['leave'].apply(encode_pent)
 list(men.columns)
 
 X=men.iloc[:,:-1].values
-print(X)
+# print(X)
 
 Y=men.iloc[:,-1].values
-print(Y)
+# print(Y)
 
 from sklearn.model_selection import train_test_split 
 x_train, x_test, y_train, y_test= train_test_split(X, Y, test_size= 0.40,random_state=0)
